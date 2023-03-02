@@ -69,7 +69,7 @@
 <div class="navbar-nav">
 <a class="nav-link active" aria-current="page" href="#">Welcome<i class="bi bi-people-fill"></i></a>
 <a class="nav-link" href="#">About Us<i class="bi bi-info-circle-fill"></i></a>
-<a class="nav-link" href="#"><i class="bi bi-box-arrow-right"></i>Sign In</a>
+<a class="nav-link" href="UserSignIn.jsp"><i class="bi bi-box-arrow-right"></i>Sign In</a>
 <a class="nav-link" href="#">Catalogue Overview<i class="bi bi-database-fill"></i></a>
 <a class="nav-link" href="#">Payment Portal<i class="bi bi-briefcase-fill"></i></a>
 <a class="nav-link disabled" href="#">OrderBooks<i class="bi bi-menu-button-wide-fill"></i></a>
