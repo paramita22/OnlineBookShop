@@ -1,6 +1,7 @@
 package in.onlinebookshop.controller;
 
-import in.onlinebookshop.main.JDBCconnection;
+
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
@@ -29,7 +30,7 @@ public class RegistrationServlet extends HttpServlet {
 		try {
 		Connection conn = null;
 		Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/onlinebookshop","root","pp10");
+			conn = DriverManager.getConnection("jdbc:Mysql://localhost:3306/onlinebookshop","root","pp10");
 			int userid=0;
 			Statement st=conn.createStatement();
 			ResultSet rs1=st.executeQuery("select max(userid) from `oninebookshop`.`users`");
@@ -39,7 +40,7 @@ public class RegistrationServlet extends HttpServlet {
 			
 			userid+=1;
 			
-				PreparedStatement pstmt=conn.prepareStatement("insert into `users`(user_fname,user_lname,user_email,user_password,contact_no,address) values(?,?,?,?,?,?) where userid="+userid);
+				PreparedStatement pstmt=conn.prepareStatement("insert into `onlinebookshop`.`users`(user_fname,user_lname,user_email,user_password,contact_no,address) values(?,?,?,?,?,?) where userid="+userid);
 				pstmt.setInt(1, userid);
 				pstmt.setString(2, user_fname);
 				pstmt.setString(3, user_lname);

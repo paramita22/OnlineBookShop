@@ -8,11 +8,11 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
  <style>
-        container-fluid {
-            min-height: 680px;
-            width: 800px;
-            background-color:blue;
-            background-image:url("img/stackWell.png");
+        .container{
+            min-height: auto;
+            width: auto;
+           
+            background-image:url("img/stack-old-books-flying-books-isolated-white-55497971.jpg");
         }
 
         .navbar {
@@ -38,6 +38,7 @@
       
          a{
              font-size:24px;
+             font-color:black;
              margin:50px;
              text-align:center;
          }
@@ -61,19 +62,19 @@
 </head>
 <body>
 <nav class ="navbar navbar-expand-lg bg-body-tertiary">
-<div class="container-fluid">
+<div class="container">
 <a class="navbar-brand" href="#">OBS<i class="bi bi-heart-pulse-fill"></i></a>
-<button class="nvbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="NavbarnavDropdown" aria-expanded="false" aria-label="Toggle-navigation">
-<span class="navbar-toggler-icon"></span>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="NavbarnavDropdown" aria-expanded="false" aria-label="Toggle-navigation">
+<span class="navbar-toggler-icon" style="color:#000000;"></span>
 </button>
 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 <div class="navbar-nav">
-<a class="nav-link active" aria-current="page" href="#">Welcome<i class="bi bi-people-fill"></i></a>
-<a class="nav-link" href="#">About Us<i class="bi bi-info-circle-fill"></i></a>
-<a class="nav-link" href="#"><i class="bi bi-box-arrow-right"></i>Sign In</a>
-<a class="nav-link" href="#">Catalogue Overview<i class="bi bi-database-fill"></i></a>
-<a class="nav-link" href="#">Payment Portal<i class="bi bi-briefcase-fill"></i></a>
-<a class="nav-link disabled" href="#">OrderBooks<i class="bi bi-menu-button-wide-fill"></i></a>
+<a class="nav-link active" aria-current="page" href="#"><b>Welcome</b><i class="bi bi-people-fill"></i></a>
+<a class="nav-link" href="aboutus.jsp"><b>About Us</b><i class="bi bi-info-circle-fill"></i></a>
+<a class="nav-link" href="UserSignIn.jsp"><i class="bi bi-box-arrow-right"></i><b>Sign In</b></a>
+<a class="nav-link" href="Catalogue.jsp"><b>Catalogue Overview</b><i class="bi bi-database-fill"></i></a>
+<a class="nav-link" href="PaymentPortal.jsp"><b>Payment Portal</b><i class="bi bi-briefcase-fill"></i></a>
+<a class="nav-link disabled" href="#"><b>OrderBooks</b><i class="bi bi-menu-button-wide-fill"></i></a>
 </div>
 </div>
 </div>
