@@ -1,3 +1,9 @@
+<%	String user_email = request.getParameter("user_email");
+String contact_no = request.getParameter("contact_no");
+
+HttpSession session1 = request.getSession();
+session1.setAttribute("user_email", user_email);
+session1.setAttribute("contact_no", contact_no);%>
 <%@page import="java.sql.*" %>
 <%@page import="in.onlinebookshop.main.JDBCconnection"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -52,8 +58,10 @@
 		out.println("User Email:"+rs2.getString(4));
 		out.println("User Contact No.:"+rs2.getString(6));
 		out.println("User Address:"+rs2.getString(7));
-		}%>
-                        </div>
+		}
+    
+		%></div>
+		
                         <div class="panel-footer"><a href="UserSignIn.jsp"><input type="button" class="btn btn-primary" value="Proceed to Login" /></a></div>
                     </div>
               

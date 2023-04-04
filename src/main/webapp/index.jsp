@@ -1,3 +1,9 @@
+<%	String user_email = request.getParameter("user_email");
+String contact_no = request.getParameter("contact_no");
+
+HttpSession session1 = request.getSession();
+session1.setAttribute("user_email", user_email);
+session1.setAttribute("contact_no", contact_no);%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -70,9 +76,9 @@
 <a class="nav-link active" aria-current="page" href="#">Welcome<i class="bi bi-people-fill"></i></a>
 <a class="nav-link" href="#">About Us<i class="bi bi-info-circle-fill"></i></a>
 <a class="nav-link" href="UserSignIn.jsp"><i class="bi bi-box-arrow-right"></i>Sign In</a>
-<a class="nav-link" href="#">Catalogue Overview<i class="bi bi-database-fill"></i></a>
-<a class="nav-link" href="#">Payment Portal<i class="bi bi-briefcase-fill"></i></a>
-<a class="nav-link disabled" href="#">OrderBooks<i class="bi bi-menu-button-wide-fill"></i></a>
+<a class="nav-link" href="Catalogue.jsp">Catalogue Overview<i class="bi bi-database-fill"></i></a>
+<a class="nav-link" href="PaymentPortal.jsp">Payment Portal<i class="bi bi-briefcase-fill"></i></a>
+<a class="nav-link disabled" href="BookOrders.jsp">OrderBooks<i class="bi bi-menu-button-wide-fill"></i></a>
 </div>
 </div>
 </div>
@@ -84,21 +90,21 @@
                     <img src="img/stackWell.png" class="d-block w-100" style="height:600px;" alt="Slide1" />
                     <div class="carousel-caption">
                         <h2><strong>A Humble Reminder to the BookWorm, We are Here</strong></h2>
-                        <a href="features.html"><input type="button" class="btn btn-danger" value="Read More" /></a>
+                        <a href="aboutus.jsp"><input type="button" class="btn btn-danger" value="Read More" /></a>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="img/oldBooks.jpeg" class="d-block w-100" style="height:600px;" alt="Slide2" />
                     <div class="carousel-caption">
                         <h2><strong>NOSTALGIA?Welcome HOME...</strong></h2>
-                        <a href="signup.html"><input type="button" class="btn btn-danger" value="Read More" /></a>
+                        <a href="UserSignUp.jsp"><input type="button" class="btn btn-danger" value="Read More" /></a>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="img/bookSwap.png" class="d-block w-100" style="height:600px;" alt="Slide3" />
                     <div class="carousel-caption">
                         <h2><strong>WHAT IS YOUR PETRONUS?</strong></h2>
-                        <a href="blogs.html"><input type="button" class="btn btn-danger" value="Read More" /></a>
+                        <a href="Catalogue.jsp"><input type="button" class="btn btn-danger" value="Read More" /></a>
                     </div>
                 </div>
             </div>
@@ -118,7 +124,7 @@
                 <div class="card-body">
                     <h4 class="card-title">WE are ALIVE</h4>
                     <p class="card-text">Reading <b>YOUR'S</b> For Ever</p>
-                    <a href="catalogue.jsp" class="btn btn-primary">CHECK</a>
+                    <a href="Catalogue.jsp" class="btn btn-primary">CHECK</a>
                 </div>
             </div>
 
@@ -127,7 +133,7 @@
                 <div class="card-body">
                     <h4 class="card-title">It is in your Nature</h4>
                     <p class="card-text">Fresh Feed</p>
-                    <a href="fresh.jsp" class="btn btn-primary">CHECK</a>
+                    <a href="NewBooks.jsp" class="btn btn-primary">CHECK</a>
                 </div>
             </div>
 
@@ -137,7 +143,7 @@
                 <div class="card-body">
                   
                     <h4 class="card-title">Back to Teens?Try Barter</h4>
-                    <a href="oldschool.jsp" class="btn btn-primary">CHECK</a>
+                    <a href="OldBooks.jsp" class="btn btn-primary">CHECK</a>
                 </div>
             </div>
 

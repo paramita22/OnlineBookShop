@@ -1,3 +1,9 @@
+<%	String user_email = request.getParameter("user_email");
+String contact_no = request.getParameter("contact_no");
+
+HttpSession session1 = request.getSession();
+session1.setAttribute("user_email", user_email);
+session1.setAttribute("contact_no", contact_no);%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -136,21 +142,44 @@
 </div>
   </li>
 </ul></div>
-<div class="row text-center" style="margin:50px;">
-<div class="card" style="width:24rem;height:24rem;position:absolute;">
-  <img src="img/bm11.jpg" class="card-img-top" alt="leisure">
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div></div></div>
+>
+  <html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Books Read', 'Days per Week'],
+          ['Classic Literature',     5],
+          ['Basic Sciences',      4],
+          ['Mathematics',  2],
+          ['Computer Science', 4],
+          ['On a Light Note',    9]
+        ]);
+
+        var options = {
+          title: 'Your Reading Track'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="piechart" style="width: 600px; height: 400px;"></div>
+  </body>
+</html>
+  <div class="row text-center" style="margin:50px;positiom:absolute;">
 
 
-<div class="col-xs-4 col-xs-offset-4">
-<div class="card" style="width:24rem;height:24rem;position:relative;float:right;">
-  <img src="img/bm2.jpeg" class="card-img-top" alt="nostalgia">
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div></div></div>
-<form>
+
+<form action="#" method="get" style="width:400px;position:absolutee;"">
 <div class="mb-3">
   <label for="formFileMultiple" class="form-label">Books to be placed in queue</label>
   <input class="form-control" type="file" id="formFileMultiple" multiple>
@@ -163,6 +192,18 @@
   <label for="formFileSm" class="form-label">Fav books</label>
   <input class="form-control form-control-sm" id="formFileSm" type="file">
 </div></form>
+
+<div class="card" style="width:12rem;height:24rem;position:relative;">
+  <img src="img/bm2.jpeg" class="card-img-top" alt="nostalgia">
+  <div class="card-body">
+    <p class="card-text">Nostalgia</p>
+  </div></div>
+
+<div class="card" style="width:12rem;height:24rem;position:relative;">
+  <img src="img/bm11.jpg" class="card-img-top" alt="leisure">
+  <div class="card-body">
+    <p class="card-text">Peace Within</p>
+  </div></div>
 </div></div>
 <jsp:include page="footer.jsp"></jsp:include>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

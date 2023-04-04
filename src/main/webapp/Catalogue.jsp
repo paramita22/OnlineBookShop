@@ -20,7 +20,13 @@
         border-radius: 35px;
     }
 
-
+	.list-group-itemi{
+		`text-align:center;
+			font-size:12px;
+		}
+	.offcanvas-top{
+		height:800px;
+	}
 	.dropdown{
         width: 300px;
         height: 150px;
@@ -54,54 +60,60 @@
     .dropdown:hover.dropdown-menu {
         display: block;
     }
+    td{
+    margin:50px;
+    text-align:center;
+    }
 </style>
 <title>Catalogue#OnlineBookShop</title>
 </head>
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
 <div class="container-fluid">
-	
-	<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Check Our Fortune</button>
+<button class="btn btn-info" type="button" style="width:400px;height:200px;padding:50px;position:absolute;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><h2><b><i class="bi bi-arrow-up-square-fill"></i>Check Our Fortune</b></h2></button>
 
 <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasTopLabel">Catalogue Overview</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">Choose Subjects</button>
   </div>
   <div class="offcanvas-body">
-  <ul class="list-group list-group-horizontal">
-  <li class="list-group-item"></li>
-  <li class="list-group-item">A second item</li>
-  <li class="list-group-item">A third item</li>
+  <ul class="list-group list-group-horizontal-sm">
+  <li class="list-group-item">World History of Inventions</li>
+  <li class="list-group-item">World History of Human Civilisations</li>
+  <li class="list-group-item">World history of Revolutions</li>
 </ul>
 <ul class="list-group list-group-horizontal-sm">
-  <li class="list-group-item">An item</li>
-  <li class="list-group-item">A second item</li>
-  <li class="list-group-item">A third item</li>
+  <li class="list-group-item">Geography of specific continents</li>
+  <li class="list-group-item">Geographical Measures</li>
+  <li class="list-group-item">Geographical Upheavals</li>
 </ul>
-<ul class="list-group list-group-horizontal-md">
-  <li class="list-group-item">An item</li>
-  <li class="list-group-item">A second item</li>
-  <li class="list-group-item">A third item</li>
+<ul class="list-group list-group-horizontal-sm">
+  <li class="list-group-item">Physics at its Core</li>
+  <li class="list-group-item">Physics at its best</li>
+  <li class="list-group-item">Physics at its Birth</li>
 </ul>
-<ul class="list-group list-group-horizontal-lg">
-  <li class="list-group-item">An item</li>
-  <li class="list-group-item">A second item</li>
-  <li class="list-group-item">A third item</li>
+<ul class="list-group list-group-horizontal-sm">
+  <li class="list-group-item">Chemical Analysis</li>
+  <li class="list-group-item">Organic Chemistry</li>
+  <li class="list-group-item">AllChemistry</li>
 </ul>
-<ul class="list-group list-group-horizontal-xl">
-  <li class="list-group-item">An item</li>
-  <li class="list-group-item">A second item</li>
-  <li class="list-group-item">A third item</li>
+<ul class="list-group list-group-horizontal-sm">
+  <li class="list-group-item">Botany</li>
+  <li class="list-group-item">Zoology</li>
+  <li class="list-group-item">Physiology</li>
 </ul>
-<ul class="list-group list-group-horizontal-xxl">
-  <li class="list-group-item">An item</li>
-  <li class="list-group-item">A second item</li>
-  <li class="list-group-item">A third item</li>
+<ul class="list-group list-group-horizontal-sm">
+  <li class="list-group-item">English Literature</li>
+  <li class="list-group-item">History of English language</li>
+  <li class="list-group-item">Usage of English</li>
 </ul>
   </div>
 </div>
-	<div class="btn-group" style=" background-image:url('img/bookSwap.png');">
+<table><tr>
+<td>
+<div style="margin-top:200px;">
+	<div class="btn-group">
 	 <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><span>Login To find Your Bag</span></button>
 	 <ul class="dropdown-menu">
   <form class="px-4 py-3">
@@ -123,10 +135,70 @@
       </div>
     </div></li>
     <button type="submit" class="btn btn-primary">Sign in</button>
-  </form></ul></div>
-  <div class="dropdown-menu dropdown-divider"></div>
+  </form></ul></div></div></td>
+<td>
+<div class="card" style="width: 12rem;height:18rem;position:relative;">
+  <img src="img/math4.jpeg" class="card-img-top" alt="maths1">
+  <div class="card-body">
+    <p class="card-text">Solve to know</p>
+  </div>
+</div></td>
+<td>
+<div class="card" style="width: 18rem;height:28rem;position:relative;">
+  <img src="img/en5.jpeg" class="card-img-top" alt="Englishlang">
+  <div class="card-body">
+    <p class="card-text">Knowing the Language better</p>
+  </div></div></div></td>
+<td>
+<div class="card" style="width: 12rem;height:24rem;position:relative;">
+  <img src="img/hs8.jpg" class="card-img-top" alt="history1">
+  <div class="card-body">
+    <p class="card-text">Know your Forefathers</p>
+  </div>
+</div></td>
+<td>
+<div class="card" style="width: 12rem;height:20rem;position:relative;">
+  <img src="img/en2.jpeg" class="card-img-top" alt="physics1">
+  <div class="card-body">
+    <p class="card-text">English is Global</p>
+  </div>
+</div></td></tr>
+
+
+<tr><td>
+<div class="card" style="width: 12rem;height:20rem;position:relative;">
+  <img src="img/cm11.jpeg" class="card-img-top" alt="chemistry1">
+  <div class="card-body">
+    <p class="card-text">Chemistry is a Mystery</p>
+  </div></div></td>
+  <td>
+  <div class="card" style="width: 12rem;height:20rem;position:relative;">
+  <img src="img/go10.jpeg" class="card-img-top" alt="geography1">
+  <div class="card-body">
+    <p class="card-text">Know the World aeound</p>
+  </div>
+</div></td>
+
+<td>
+<div class="card" style="width: 12rem;height:12rem;position:relative;">
+  <img src="img/math2.jpeg" class="card-img-top" alt="maths1">
+  <div class="card-body">
+    <p class="card-text">Solve to know</p>
+  </div>
+</div></td>
+<td>
+  <div class="card" style="width: 12rem;height:20rem;position:relative;">
+  <img src="img/go7.jpeg" class="card-img-top" alt="geography1">
+  <div class="card-body">
+    <p class="card-text">The World Around</p>
+  </div>
+</div></td>
+
+  <td>
+   <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><span>Wait!!</span></button>
+  <ul class="dropdown-menu dropdown-divider">
   <a class="dropdown-item" href="UserSignUp.jsp">New around here? Sign up</a>
-  <a class="dropdown-item" href="ChangePassword.jsp">Forgot password?</a>
+  <a class="dropdown-item" href="ChangePassword.jsp">Forgot password?</a></ul></td></tr></table>
 </div>
 	
 	<jsp:include page="footer.jsp"></jsp:include>

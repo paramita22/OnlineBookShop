@@ -12,6 +12,21 @@ height:600px;
 background-image:url("img/download.jpeg");
 }
 
+.panel{
+height:600px;
+width:800px;
+background-color:#000000;
+align-items:center;
+margin-left:400px;
+}
+
+td{
+height:100px;
+width:400px;
+font-sixe:28px;
+text-align:center;
+color:blue;
+}
 .btn{
 	background-color:red;
 }
@@ -30,7 +45,7 @@ background-color:green;
 <table>
 <tr><td>username:</td><td><input type="text" placeholder="registered email" name="user_email" required/></td></tr>
 <tr><td>password:</td><td><input type="password" placeholder="password" name="user_password" required/></td></tr>
-<tr><td><a href="Changepassword.jsp">Forgot password?</a></td><td><input type="submit" value="Sign In" class="btn"/></td></tr>
+<tr><td><a href="Changepassword.jsp">Forgot password?</a></td><td><input type="submit" value="Sign In" class="btn btn-danger"/></td></tr>
 </table></form></div>
 <div class="panel-footer"></div>
 </div></div>

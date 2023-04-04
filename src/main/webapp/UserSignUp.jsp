@@ -1,3 +1,4 @@
+<%@page import="java.sql.*" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -91,7 +92,7 @@
 <jsp:include page="header.jsp"></jsp:include>
 <div class="container-fluid">
 
-<form action="./reg" method="post">
+<form method="post" action="./reg">
                     <h2><b>Register to Reap Benefits</b></h2>
                     <table cell-spacing="50px" cell-padding="50px">
                         <tr><th>First Name:</th><td><input type="text" name="user_fname" id="ufname" required /></td></tr>
@@ -101,12 +102,12 @@
                         <tr><th>Confirm Password:</th><td><input type="password" name="user_password" id="upass" required /></td></tr>
                         <tr><th>Contact No.:</th><td><input type="number" name="contact_no" id="ucontact" required /></td></tr>
                         <tr><th>Address:</th><td><input type="text" name="address" id="uaddress" /></td></tr>
-                        <tr><td><input type="reset" value="Refresh" class="btn btn-lg-active" /></td><td><center><a href="RegisterReceipt.jsp"><input type="submit" value="Get Receipt" onkeyup="printReceipt()" class="btn btn-success" style="border-radius:30px;" /></center></a></td></tr>
+                        <tr><td><input type="reset" value="Refresh" class="btn btn-lg-active" /></td><td><input type="submit" value="Get Receipt" class="btn btn-success" style="border-radius:30px;" /></td></tr>
                     </table>
                 
-            
+       
         </form>
-</div>
+</div></div>
 <jsp:include page="footer.jsp"></jsp:include>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
