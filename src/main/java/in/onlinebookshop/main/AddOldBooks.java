@@ -7,6 +7,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 import javax.servlet.ServletException;
@@ -17,12 +18,11 @@ import javax.servlet.http.HttpServletResponse;
 
 public class AddOldBooks {
 
-	public static void main(String[] args) {
 		  Connection conn=null;
 	       Statement st=null;
 	       PreparedStatement pstmt1=null;
 	    
-		public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+		public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, ClassNotFoundException, SQLException{
 		
 				Class.forName("com.mysql.cj.jdbc.Driver");
 				conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/onlinebookshop","root","pp10");
