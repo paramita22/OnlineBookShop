@@ -16,10 +16,13 @@ public class Book implements Serializable {
 	private int old_bookid;
 	private String book_name;
 	private String author_name;
+	private String authorname;
 	private String hardcover_copies;
+	private String hardcover;
 	private String online_versions;
 	private String other_formats;
 	private String cost;
+	private String Donor_id;
 	int flag=0;
 	static {
 		System.out.println("Book is loading...");
@@ -32,16 +35,6 @@ public class Book implements Serializable {
 		number=scan.nextLine();
 	}
 	
-	punlic String getISBN(){
-	ISBN isbn=new ISBN(number);
-		ISBN=number;
-		return ISBN;
-	}
-	
-	public void setISBN(String ISBN){
-		this.ISBN=ISBn;
-		}
-		
 		
 		public int getNbid() {
 		return nbid;
@@ -60,21 +53,54 @@ public class Book implements Serializable {
 	}
 
 
-public String getBookName() {
-		return book_name;
-	}
-
-	public void setBookname(String book_name) {
-		this.book_name = book_name;
-	}
-
-	
 	public String getBookName() {
 		return book_name;
 	}
 
-	public void setBookname(String book_name) {
+	public void setBookName(String book_name) {
 		this.book_name = book_name;
+	}
+
+	public String getNumber() {
+		return number;
+	}
+
+	public void setNumber(String number) {
+		this.number = number;
+	}
+	
+	public String getISBN(){
+		ISBN isbn=new ISBN(number);
+			ISBN=number;
+			return ISBN;
+		}
+		
+		public void setISBN(String ISBN){
+			this.ISBN=ISBN;
+			}
+
+	public String getAuthorname() {
+		return authorname;
+	}
+
+	public void setAuthorname(String authorname) {
+		this.authorname = authorname;
+	}
+
+	public String getHardcover() {
+		return hardcover;
+	}
+
+	public void setHardcover(String hardcover) {
+		this.hardcover = hardcover;
+	}
+
+	public String getDonor_id() {
+		return Donor_id;
+	}
+
+	public void setDonor_id(String donor_id) {
+		Donor_id = donor_id;
 	}
 
 	public String getAuthorName() {
@@ -86,7 +112,7 @@ public String getBookName() {
 	}
 
 	public String getHardcover_copies() {
-		return city;
+		return hardcover_copies;
 	}
 
 	public void setHardcover_copies(String hardcover_copies) {
@@ -97,36 +123,25 @@ public String getBookName() {
 		return online_versions;
 	}
 
-	public void setOnlineversions(String online-versions) {
+	public void setOnlineversions(String online_versions) {
 		this.online_versions = online_versions;
 	}
 
-	public Integer getCost() {
+	public String getCost() {
 		return cost;
 	}
 
 	public void setCost(String cost) {
 		this.cost = cost;
 	}
-	public Integer getOtherFormats() {
+	public String getOtherFormats() {
 		return other_formats;
 	}
-
-	public void setOtherFormats(String other_formats) {
-		this.other_formats = other_formats;
-	}
-	public Integer getDonorId() {
-		return donor_id;
-	}
-
-	public void seDonorID(String donor_id) {
-		this.donor_id = donor_id;
-	}
-
 	@Override
 	public String toString() {
-		return "Book [ISBN=" + ISBN + ", book_name=" + book_name + ", author-name=" + author_name + ", hardcover_copies=" + hardcover_copies + ", cost=" + cost
-				+ "]";
+		return "NewBook [ISBN=" + ISBN + ", book_name=" + book_name + ", author-name=" + author_name + ", hardcover_copies=" + hardcover_copies + ", cost=" + cost
+				+ "]\tOldBook [ISBN=" + ISBN + ", book_name=\" + book_name + \", authorname=\" + authorname + \", hardcover=\" + hardcover + \", other_formats\"+other_formats+\"cost=\" + cost,donor_id+\"donor_id\"+\n"
+				+ "				+ \"]";
 	}
 
 }
