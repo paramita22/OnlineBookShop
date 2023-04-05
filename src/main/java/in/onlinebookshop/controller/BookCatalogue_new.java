@@ -1,6 +1,15 @@
 package in.onlinebookshop.controller;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,8 +32,10 @@ public class BookCatalogue_new extends HttpServlet {
 		String hardcover_copieso=request.getParameter("hardcover_copies");
 		String online_xersions=request.getParameter("online_versions");
 		String cost=request.getParameter("cost");
-		String path = request.getParameter("book_cover")
+		String path = request.getParameter("book_cover");
 		Connection conn = null;
+		String hardcover_copies = null;
+		String online_versions = null;
 		try {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/onlinebookshop","root","pp10");
@@ -47,7 +58,7 @@ public class BookCatalogue_new extends HttpServlet {
 				pstmt.setString(7, cost);
 		
 				FileInputStream fis = new FileInputStream(path);
-				pstmt.setString(9,fis);
+				pstmt.setBinaryStream(9,fis);
 				pstmt.executeUpdate();
 			
 		}catch(Exception e) {
@@ -68,7 +79,7 @@ public class BookCatalogue_new extends HttpServlet {
 		out.println("<tr><td>Hardcover_Copies:</td><td>"+hardcover_copies+"</td></tr>");
 		out.println("<tr><td>Online Versions:</td><td>"+online_versions+"</td></tr>");
 		out.println("<tr><td>Cost:</td><td>"+cost+"</td></tr>");
-		String path = getServletContext().getRealPath("images/hs2.jpg");
+		path = getServletContext().getRealPath("images/hs2.jpg");
 		System.out.println(path);
 		
 		File file = new File(path);
@@ -78,7 +89,8 @@ public class BookCatalogue_new extends HttpServlet {
 		byte[] b = new byte[(int) file.length()];
 		fis.read(b);// reading and placing the image data into byte array
 
-		os.write(b);// writing the data as the response from byte array
+		PrintWriter os = null;
+		os.write(new String(b));// writing the data as the response from byte array
 		os.flush();
 		
 
